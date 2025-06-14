@@ -644,6 +644,8 @@ header {
   opacity: 0.6;
 }
 
+
+/* footer cssend  */
 footer {
   background: var(--color-primary);
   color: white;
@@ -663,11 +665,7 @@ footer {
   align-items: center;
   overflow:hidden;
 }
-@media (min-width: 768px) {
-  .main-container {
-    grid-template-columns: 1fr 1.5fr 1fr;
-  }
-}
+ 
 
 /* Left Section */
 .left-section {
@@ -1796,12 +1794,7 @@ footer {
     .stars {
       color:yellowgreen;
     }
-
-    @media (max-width: 767px) {
-      main h2 {
-        font-size: 1.5rem;
-      }
-    }
+ 
 
 /* testimonal css end  */
 
@@ -1961,15 +1954,17 @@ footer h5 {
 
  /* Hero section adjustments */
   .hero {
-    align-items: center;
-    text-align: center;
+    align-items:start;
+    width:100%;
+    height:800px;
+    
   
   }
 
   .content {
   text-align: left;
   width: 600px;
-  background-color:gray;
+  background-color:rgb(255, 0, 0);
   margin: 0 0 0 0px;
 }
 
@@ -2098,26 +2093,104 @@ footer h5 {
 /* heading css end */
 
 /* why choose css start  */
-h1.growth-title {
-        font-size: 1.75rem;
-        margin-bottom: 40px;
-      }
+ .why-choose-container {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
 
-      .growth-card-row {
-        flex-direction: column;
-        gap: 32px;
-        align-items: center;
-      }
+  .stats-box,
+  .content-box {
+    flex: 1 1 100%;
+    height: auto;
+    padding-right: 0;
+  }
 
-      .growth-card {
-        max-width: 100%;
-        padding: 24px 20px;
-      }
+  .stats-box {
+    order: 2;
+    margin-top: 30px;
+    overflow: visible;
+  }
 
-      form.contact-form h2 {
-        font-size: 1.4rem;
-      }
+  .content-box h3 {
+    font-size: 28px;
+  }
+
+  .content-box small {
+    font-size: 18px;
+  }
+
+  .content-box p {
+    font-size: 14px;
+  }
 /* why choose css end  */
+
+/* mission vission css start  */
+
+.container-mission-vission {
+    padding: 2rem 1.5rem;
+    margin: 60px 0;
+  }
+
+  h2.title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .vision-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .vision-box::before {
+    width: 35px;
+    height: 35px;
+    top: -40px;
+  }
+
+  .vision-title,
+  .mission-title,
+  .values-title {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+
+  .vision-text,
+  .mission-text,
+  .values-text {
+    font-size: 0.85rem;
+  }
+
+
+/*  mission vission css end  */
+
+
+/* accodion css start  */
+ .accordion {
+    width: 90%;
+    margin: 40px auto 0;
+  }
+
+  .accordion-title {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .accordion-content {
+    font-size: 14px;
+    padding: 0 18px;
+  }
+
+  .accordion-item.active .accordion-content {
+    padding: 14px 18px;
+  }
+
+/* accodion css end */
+
 
 /* client css start */
  .client-block img {
@@ -2132,7 +2205,43 @@ h1.growth-title {
 
 
 /* footer css start  */
+ .footer-top {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
+  .footer-section {
+    flex: 1 1 100%;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .newsletter-form input[type="email"] {
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    border-radius: 30px;
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-bottom .footer-social {
+    justify-content: flex-start;
+  }
 
 
 /* footer css end  */
@@ -2176,25 +2285,132 @@ h1.growth-title {
 
 
 
-  /* FAQs css start */
-  .accordion {
-    width:100%;
+  /* why choose css resp start */
+
+.why-choose-container {
+    padding: 40px 20px;
   }
-.accordion-title {
-        font-size: 15px;
-        padding: 14px 16px;
-      }
 
-      .accordion-content {
-        font-size: 14px;
-        padding: 0 16px;
-      }
+  .stat h2 {
+    font-size: 36px;
+  }
 
-      .accordion-item.active .accordion-content {
-        padding: 14px 16px 18px;
-      }
+  .stat p {
+    font-size: 13px;
+  }
+
+  .content-box h3 {
+    font-size: 24px;
+  }
+
+  .content-box small {
+    font-size: 16px;
+  }
+
+  .content-box p {
+    font-size: 13px;
+  }
+
+
+
+  /* why choosre section end */
+
+/* mission vission resp code start  */
+
+.container-mission-vission {
+    padding: 2rem 1rem;
+    margin: 40px 0;
+  }
+
+  h2.title {
+    font-size: 1.3rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .vision-section {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .vision-box::before {
+    width: 30px;
+    height: 30px;
+    top: -35px;
+  }
+
+  .vision-title,
+  .mission-title,
+  .values-title {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .vision-text,
+  .mission-text,
+  .values-text {
+    font-size: 0.82rem;
+  }
+
+
+/* mission vission css code end */
+
+
 
   /* FAQs css start */
+   .accordion {
+    width: 95%;
+    margin: 30px auto 0;
+  }
+
+  .accordion-title {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .accordion-content {
+    font-size: 13px;
+    padding: 0 16px;
+  }
+
+  .accordion-item.active .accordion-content {
+    padding: 12px 16px;
+  }
+
+  .accordion-title::after {
+    right: 16px;
+  }
+  /* FAQs css start */
+
+
+  /* footer css start  */
+footer {
+    font-size: 0.9rem;
+  }
+
+  .footer-section h5 {
+    font-size: 1rem;
+  }
+
+  .footer-section p,
+  .footer-section li,
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    font-size: 0.85rem;
+  }
+
+  .footer-social a {
+    font-size: 1rem;
+  }
+
+  /* footer css end */
 }
 
     
