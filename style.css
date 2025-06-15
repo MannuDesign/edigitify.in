@@ -218,38 +218,157 @@ button:hover,
   animation-delay: 0.9s;
 }
 
-
-  /* Navbar Custom Styles */
-    .navbar-custom {
-      background-color: var(--color-primary);
-      padding: 15px 0;
-      color: var(--color-bg-white);
-      box-shadow: var(--shadow-base);
-      width: 100%;
+/* topbar header */
+/* Top Header */
+    .top-header {
+      background-color: #222;
+      color: #fff;
+      font-size: 14px;
     }
 
-    .navbar-custom .nav-link,
-    .navbar-custom .navbar-brand,
-    .navbar-custom .btn {
-      color: var(--color-bg-white) !important;
+    .top-header .top-left i,
+    .top-header .top-right i {
+      color: var(--color-accent-green);
     }
 
-    .navbar-custom .nav-link:hover,
-    .navbar-custom .nav-link:focus {
-      color: var(--color-accent-green) !important;
+    .top-header a {
+      color: #fff;
+      text-decoration: none;
     }
 
-    .navbar-toggler {
-      border: none;
+    .top-header a:hover {
+      color: var(--color-accent-green);
     }
 
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
+/* topbar header end */
 
-    .navbar-nav {
-      gap: 20px;
-    }
+
+
+
+
+
+   /* Navbar css */
+.navbar-custom {
+  background-color: var(--color-primary);
+  padding: 15px 0;
+  color: var(--color-bg-white);
+  box-shadow: var(--shadow-base);
+  width: 100%;
+  z-index: 999;
+  position: relative;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .btn {
+  color: var(--color-bg-white) !important;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+  color: var(--color-accent-green) !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav {
+  gap: 20px;
+}
+
+/* Mega Menu Dropdown */
+.dropdown-mega {
+  position: relative;
+}
+
+
+.dropdown-mega .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%; /* center position */
+  transform: translateX(-50%); /* shift back by 50% */
+  width: auto; /* adjust width as needed */
+  min-width: 600px; /* optional: control how wide the menu is */
+  background-color: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+
+.dropdown-mega:hover .mega-menu,
+.dropdown-mega:focus-within .mega-menu {
+  display: block;
+}
+
+/* Column Layout */
+.mega-menu .row {
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+/* Column Width */
+.mega-menu .col-md-3,
+.mega-menu .col-md-4 {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Headings */
+.mega-menu h6 {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* List Styles */
+.mega-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu ul li a {
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.mega-menu ul li a:hover {
+  color: var(--color-accent-green);
+  padding-left: 6px;
+}
+
+/* Modal Button (Hamburger) Fix for White Color */
+.hamburger-btn {
+  font-size: 20px;
+  color: #fff;
+  background: none;
+  border: none;
+}
+
+/* Modal Contact Form */
+.modal-content {
+  border-radius: 12px;
+  box-shadow: var(--shadow-base);
+}
+
+.modal-header .btn-close {
+  background: transparent;
+  border: none;
+}
 
     /* Optional: Fullscreen video background */
     .bg-video {
@@ -273,7 +392,10 @@ button:hover,
       font-weight: bold;
     }
  
- 
+ /* navbar end  */
+
+
+
 
  
     /* Background video */
@@ -315,7 +437,7 @@ button:hover,
   height:560px;  
   z-index: 1;
   overflow: hidden;
-  background-color: #ffffff6b;
+ 
 }
 
 /* Hero Content */
@@ -1863,32 +1985,57 @@ footer h5 {
 }
 
     /* Responsive */
-    @media (max-width: 768px) {
+ @media (min-width: 400px) and (max-width:768px) {
 
       body {
   overflow-x: hidden;
 }
 
+/* nav */
+.navbar-custom {
+    padding: 10px 0;
+    flex-direction: column;
+  }
 
+  .navbar-nav {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
 
-        .dropdown-mega:hover .dropdown-menu {
-        display: none !important;
-      }
+  .dropdown-mega .mega-menu {
+    position: static;
+    display: block;
+    box-shadow: none;
+    padding: 15px;
+    background-color: #fff;
+  }
 
-      .dropdown-menu.mega-menu {
-        position: relative;
-        padding: 1rem;
-        width: 100%;
-      }
+  .mega-menu .container {
+    padding: 0;
+  }
 
+  .mega-menu .col-md-3,
+  .mega-menu .col-md-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+  }
+
+/* nav */
+
+        
 
       .content h1 {
         font-size: 2.5rem;
       }
 
-      .nav {
-        display: none;
-      }
+      
 
   .hero {
     height:650px;
@@ -2214,20 +2361,64 @@ footer h5 {
       
     }
 
-@media (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 400px) {
   body {
   overflow-x: hidden;
 }
 
-     .dropdown-mega:hover .dropdown-menu {
-        display: none !important;
-      }
 
-      .dropdown-menu.mega-menu {
-        position: relative;
-        padding: 1rem;
-        width: 100%;
-      }
+/* nav */
+.navbar-custom {
+    padding: 8px 0;
+    flex-direction: column;
+  }
+
+  .navbar-brand img {
+    height: 30px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .dropdown-mega .mega-menu {
+    position: static;
+    display: block;
+    box-shadow: none;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .mega-menu .container {
+    padding: 0;
+  }
+
+  .mega-menu .col-md-3,
+  .mega-menu .col-md-4 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+
+
+/* nav */
+     
 
     .content h1 {
     font-size: 1.8rem;
@@ -2243,10 +2434,7 @@ footer h5 {
     font-size: 14px;
   }
 
-  .navbar .navbar-brand img {
-    height: 30px;
-  }
-
+  
 
     
 
