@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -30,11 +30,6 @@
  
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-
-
-
-
-
 </head>
 <body>
   <!-- Background Video -->
@@ -44,6 +39,18 @@
   </video>
 
   <!-- Header -->
+    <!-- Top Header -->
+  <div class="top-header py-1 px-3 d-flex justify-content-between align-items-center">
+    <div class="top-left small">
+      <span><i class="fas fa-envelope"></i> info@edigitify.com</span>
+      <span class="ms-3"><i class="fas fa-phone"></i> +91-9876543210</span>
+    </div>
+    <div class="top-right">
+      <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light navbar-custom border-bottom">
   <div class="container d-flex justify-content-between align-items-center">
@@ -829,7 +836,7 @@
     <div class="footer-section">
       <h5>Contact Information</h5>
       <ul class="contact-info list-unstyled">
-        <li>Office 42, Phase 8B, Industrial Area, Mohali, Punjab, India</li>
+        <li> 22A Hauz Khas village New delhi 110016  </li>
         <li>Phone: <a href="tel:+919876543210">+91 98765 43210</a></li>
         <li>Email: <a href="mailto:info@edigitify.com">info@edigitify.com</a></li>
       </ul>
@@ -863,7 +870,7 @@
   <!-- Footer Bottom -->
   <div class="footer-bottom container px-3 px-md-5 text-start d-flex flex-wrap justify-content-between align-items-center py-3">
     <div class="copyright">
-      &copy; 2025 <strong>eDigitify Pvt. Ltd.</strong> All rights reserved.
+      &copy; 2015 <strong>eDigitify Pvt. Ltd.</strong> All rights reserved.
     </div>
     <div class="footer-social">
       <a href="https://facebook.com/edigitify" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1020,15 +1027,17 @@
 </script>
 
 
- <script>
-  const menuBtn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.breadcrumb-nav');
-  menuBtn.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    nav.style.justifyContent = 'center';
+ 
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      var contactModal = new bootstrap.Modal(document.getElementById('contactModal'));
+      contactModal.show();
+    }, 1000); // 1 second
   });
 </script>
- 
+
   
 </body>
 </html>
